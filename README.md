@@ -1,5 +1,7 @@
 # DiPlay
 
+> **Unofficial experimental fork — Android 7.0 / API 24:** This branch lowers the minimum API for the main mobile app. One contributor reports successful CarPlay operation in an aftermarket head unit, but its information screen displayed Android 12; this is not confirmation of operation on Android 7.0 hardware. See [experimental compatibility notes](docs/COMPATIBILITY.md).
+
 **CarPlay for compatible BYD Android head units.** Wired and wireless, with the familiar DiAuto interface. Independent app: `com.shihab.diplay`.
 
 > **BYD support scope:** These projects focus on BYD cars. They may work on other brands, but other brands are unsupported and there are no plans to add support or fix brand-specific incompatibilities.
@@ -10,7 +12,7 @@
 
 ## 0.2.15 — public preview
 
-Install on the **car**, not the iPhone. No jailbreak, dongle, Mac, account or authentication server is required for use. Core CarPlay does not require ADB; optional dashboard, battery, wheel-speed and parked-video features do. Your head unit must permit APK installation. The APK supports Android 7.1+ (API 25); Android 7.1–8.1 support is new and not yet confirmed on a vehicle. Wireless supports Wi-Fi Direct, the car’s existing hotspot or Existing Wi-Fi / Same LAN. Android 7.1–9 Wi-Fi Direct uses a firmware-dependent legacy path with generated group credentials and unverified requested frequency; see [Android 9 Wi-Fi Direct](docs/ANDROID9_WIFI_DIRECT.md). Android 10+ verifies its negotiated group frequency.
+Install on the **car**, not the iPhone. No jailbreak, dongle, Mac, account or authentication server is required for use. Core CarPlay does not require ADB; optional dashboard, battery, wheel-speed and parked-video features do. Your head unit must permit APK installation. The upstream v0.2.15 APK targets Android 7.1+ (API 25). This fork's experimental branch lowers the main mobile app's minimum to Android 7.0 (API 24); actual Android 7.0 device compatibility has not been verified. The contributor reports successful CarPlay operation on one aftermarket head unit, whose system screen displayed Android 12. Wireless supports Wi-Fi Direct, the car’s existing hotspot or Existing Wi-Fi / Same LAN. Android 7.1–9 Wi-Fi Direct uses a firmware-dependent legacy path with generated group credentials and unverified requested frequency; see [Android 9 Wi-Fi Direct](docs/ANDROID9_WIFI_DIRECT.md). Android 10+ verifies its negotiated group frequency.
 
 - Wired USB and wireless CarPlay with local authentication.
 - BYD HUD navigation with arrows, distance and street names on verified firmware.
@@ -26,7 +28,7 @@ Earlier releases were tested on the development DiLink5.1 car: live windshield g
 
 ## What’s new in 0.2.15
 
-- Android 7.1+ compatibility; older head units still need vehicle feedback.
+- The upstream v0.2.15 release targets Android 7.1+; this fork experiments with API 24. See the compatibility notes for test limits.
 - A first-launch DiLink setup guide and manual update checks in About.
 - Light, Dark and Auto appearance, compact layouts and dedicated Language/About settings.
 - Music prebuffer recovery after underruns and a main-video decoder hint with compatibility fallback.
